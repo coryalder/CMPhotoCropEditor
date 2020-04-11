@@ -129,7 +129,31 @@ static const CGFloat MarginLeft = 20.0f;
         return;
     }
     
-    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    UIInterfaceOrientation interfaceOrientation;
+    
+    if (@available(iOS 13.0, *)) {
+        interfaceOrientation = self.window.windowScene.interfaceOrientation;
+    } else {
+        UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
+        switch (deviceOrientation) {
+            case UIDeviceOrientationPortrait:
+                interfaceOrientation = UIInterfaceOrientationPortrait;
+                break;
+            case UIDeviceOrientationLandscapeLeft:
+                interfaceOrientation = UIInterfaceOrientationLandscapeRight; // device is left, interface is right
+                break;
+            case UIDeviceOrientationLandscapeRight:
+                interfaceOrientation = UIInterfaceOrientationLandscapeLeft; // device is right, interface is left
+                break;
+            case UIDeviceOrientationPortraitUpsideDown:
+                interfaceOrientation = UIInterfaceOrientationPortraitUpsideDown;
+                break;
+            default:
+                interfaceOrientation = UIInterfaceOrientationUnknown;
+                break;
+        }
+    }
+    
     if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
         self.editingRect = CGRectInset(self.bounds, MarginLeft, MarginTop);
     } else {
