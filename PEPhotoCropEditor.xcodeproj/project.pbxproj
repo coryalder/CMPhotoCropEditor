@@ -3,56 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		14707AE7175B99D900A58D40 /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14707AE6175B99D800A58D40 /* PEPhotoCropEditor.bundle */; };
-		14707AEA175B9B6E00A58D40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14707AEC175B9B6E00A58D40 /* Localizable.strings */; };
 		14BB4E8A174BC39000C75F78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BB4E89174BC39000C75F78 /* UIKit.framework */; };
 		14BB4E8C174BC39000C75F78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BB4E8B174BC39000C75F78 /* Foundation.framework */; };
 		14BB4E8E174BC39000C75F78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BB4E8D174BC39000C75F78 /* CoreGraphics.framework */; };
-		14BB4EC9174BC57700C75F78 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14BB4EC6174BC57700C75F78 /* Default-568h@2x.png */; };
-		14BB4ECA174BC57700C75F78 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 14BB4EC7174BC57700C75F78 /* Default.png */; };
-		14BB4ECB174BC57700C75F78 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14BB4EC8174BC57700C75F78 /* Default@2x.png */; };
-		14BB4ECE174BC59500C75F78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4ECD174BC59500C75F78 /* main.m */; };
-		14BB4EDE174BC5D300C75F78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4EDB174BC5D300C75F78 /* AppDelegate.m */; };
-		14BB4EDF174BC5D300C75F78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4EDD174BC5D300C75F78 /* ViewController.m */; };
 		14BB4EE1174BC68700C75F78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BB4EE0174BC68700C75F78 /* QuartzCore.framework */; };
 		14BB4EE3174BC68C00C75F78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BB4EE2174BC68C00C75F78 /* AVFoundation.framework */; };
-		14BB4EE7174BD70200C75F78 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14BB4EE5174BD70200C75F78 /* InfoPlist.strings */; };
-		14BB4EEC174BD70E00C75F78 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BB4EE8174BD70E00C75F78 /* MainStoryboard_iPad.storyboard */; };
-		14BB4EED174BD70E00C75F78 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BB4EEA174BD70E00C75F78 /* MainStoryboard_iPhone.storyboard */; };
 		14BB4F09174BD79E00C75F78 /* PECropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F08174BD79E00C75F78 /* PECropView.m */; };
 		14BB4F0C174BD7B100C75F78 /* PECropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F0B174BD7B100C75F78 /* PECropViewController.m */; };
 		14BB4F11174BD7CC00C75F78 /* PECropRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F0E174BD7CA00C75F78 /* PECropRectView.m */; };
 		14BB4F12174BD7CC00C75F78 /* PEResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F10174BD7CB00C75F78 /* PEResizeControl.m */; };
+		8B1C6DB124414AD800CB3F0E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6D9E24414AD800CB3F0E /* Localizable.strings */; };
+		8B1C6DB224414AD800CB3F0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA124414AD800CB3F0E /* InfoPlist.strings */; };
+		8B1C6DB324414AD800CB3F0E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA424414AD800CB3F0E /* Default@2x.png */; };
+		8B1C6DB424414AD800CB3F0E /* PEPhotoCropEditor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA524414AD800CB3F0E /* PEPhotoCropEditor-Info.plist */; };
+		8B1C6DB524414AD800CB3F0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA624414AD800CB3F0E /* ViewController.m */; };
+		8B1C6DB624414AD800CB3F0E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA724414AD800CB3F0E /* MainStoryboard_iPad.storyboard */; };
+		8B1C6DB724414AD800CB3F0E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA924414AD800CB3F0E /* MainStoryboard_iPhone.storyboard */; };
+		8B1C6DB824414AD800CB3F0E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DAB24414AD800CB3F0E /* Default-568h@2x.png */; };
+		8B1C6DB924414AD800CB3F0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C6DAC24414AD800CB3F0E /* main.m */; };
+		8B1C6DBA24414AD800CB3F0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C6DAD24414AD800CB3F0E /* AppDelegate.m */; };
+		8B1C6DBB24414AD800CB3F0E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DAF24414AD800CB3F0E /* Default.png */; };
 		E576407617A7889200111967 /* UIImage+PECrop.m in Sources */ = {isa = PBXBuildFile; fileRef = E576407417A7889200111967 /* UIImage+PECrop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14707AE6175B99D800A58D40 /* PEPhotoCropEditor.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PEPhotoCropEditor.bundle; path = Resources/PEPhotoCropEditor.bundle; sourceTree = SOURCE_ROOT; };
-		14707AEB175B9B6E00A58D40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		14707AED175B9B7000A58D40 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		14BB4E86174BC39000C75F78 /* PEPhotoCropEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PEPhotoCropEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BB4E89174BC39000C75F78 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		14BB4E8B174BC39000C75F78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14BB4E8D174BC39000C75F78 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		14BB4EC6174BC57700C75F78 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "DemoApp/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
-		14BB4EC7174BC57700C75F78 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = DemoApp/Default.png; sourceTree = SOURCE_ROOT; };
-		14BB4EC8174BC57700C75F78 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "DemoApp/Default@2x.png"; sourceTree = SOURCE_ROOT; };
-		14BB4ECD174BC59500C75F78 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DemoApp/main.m; sourceTree = SOURCE_ROOT; };
-		14BB4ECF174BC59E00C75F78 /* PEPhotoCropEditor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PEPhotoCropEditor-Info.plist"; path = "DemoApp/PEPhotoCropEditor-Info.plist"; sourceTree = SOURCE_ROOT; };
-		14BB4EDA174BC5D300C75F78 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DemoApp/AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		14BB4EDB174BC5D300C75F78 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = DemoApp/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		14BB4EDC174BC5D300C75F78 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = DemoApp/ViewController.h; sourceTree = SOURCE_ROOT; };
-		14BB4EDD174BC5D300C75F78 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = DemoApp/ViewController.m; sourceTree = SOURCE_ROOT; };
 		14BB4EE0174BC68700C75F78 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		14BB4EE2174BC68C00C75F78 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		14BB4EE4174BD6E600C75F78 /* PEPhotoCropEditor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PEPhotoCropEditor-Prefix.pch"; path = "DemoApp/PEPhotoCropEditor-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		14BB4EE6174BD70200C75F78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = DemoApp/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		14BB4EE9174BD70E00C75F78 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = DemoApp/en.lproj/MainStoryboard_iPad.storyboard; sourceTree = SOURCE_ROOT; };
-		14BB4EEB174BD70E00C75F78 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = DemoApp/en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
 		14BB4F07174BD79E00C75F78 /* PECropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PECropView.h; path = Lib/PECropView.h; sourceTree = SOURCE_ROOT; };
 		14BB4F08174BD79E00C75F78 /* PECropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PECropView.m; path = Lib/PECropView.m; sourceTree = SOURCE_ROOT; };
 		14BB4F0A174BD7B100C75F78 /* PECropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PECropViewController.h; path = Lib/PECropViewController.h; sourceTree = SOURCE_ROOT; };
@@ -61,6 +47,21 @@
 		14BB4F0E174BD7CA00C75F78 /* PECropRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PECropRectView.m; path = Lib/PECropRectView.m; sourceTree = SOURCE_ROOT; };
 		14BB4F0F174BD7CB00C75F78 /* PEResizeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PEResizeControl.h; path = Lib/PEResizeControl.h; sourceTree = SOURCE_ROOT; };
 		14BB4F10174BD7CB00C75F78 /* PEResizeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PEResizeControl.m; path = Lib/PEResizeControl.m; sourceTree = SOURCE_ROOT; };
+		8B1C6D9F24414AD800CB3F0E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8B1C6DA024414AD800CB3F0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8B1C6DA224414AD800CB3F0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B1C6DA324414AD800CB3F0E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B1C6DA424414AD800CB3F0E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8B1C6DA524414AD800CB3F0E /* PEPhotoCropEditor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PEPhotoCropEditor-Info.plist"; sourceTree = "<group>"; };
+		8B1C6DA624414AD800CB3F0E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8B1C6DA824414AD800CB3F0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		8B1C6DAA24414AD800CB3F0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		8B1C6DAB24414AD800CB3F0E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8B1C6DAC24414AD800CB3F0E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B1C6DAD24414AD800CB3F0E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B1C6DAE24414AD800CB3F0E /* PEPhotoCropEditor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PEPhotoCropEditor-Prefix.pch"; sourceTree = "<group>"; };
+		8B1C6DAF24414AD800CB3F0E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8B1C6DB024414AD800CB3F0E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E576407417A7889200111967 /* UIImage+PECrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PECrop.m"; path = "Lib/UIImage+PECrop.m"; sourceTree = SOURCE_ROOT; };
 		E576407517A7889200111967 /* UIImage+PECrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+PECrop.h"; path = "Lib/UIImage+PECrop.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -84,7 +85,8 @@
 		14BB4E7D174BC39000C75F78 = {
 			isa = PBXGroup;
 			children = (
-				14BB4E8F174BC39000C75F78 /* PEPhotoCropEditor */,
+				8B1C6D9D24414AD800CB3F0E /* DemoApp */,
+				14BB4EB4174BC45A00C75F78 /* Lib */,
 				14BB4E88174BC39000C75F78 /* Frameworks */,
 				14BB4E87174BC39000C75F78 /* Products */,
 			);
@@ -111,31 +113,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		14BB4E8F174BC39000C75F78 /* PEPhotoCropEditor */ = {
-			isa = PBXGroup;
-			children = (
-				14BB4EC5174BC52800C75F78 /* DemoApp */,
-				14BB4EB4174BC45A00C75F78 /* Lib */,
-				14BB4E90174BC39000C75F78 /* Supporting Files */,
-			);
-			path = PEPhotoCropEditor;
-			sourceTree = "<group>";
-		};
-		14BB4E90174BC39000C75F78 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				14BB4ECF174BC59E00C75F78 /* PEPhotoCropEditor-Info.plist */,
-				14BB4EE5174BD70200C75F78 /* InfoPlist.strings */,
-				14707AEC175B9B6E00A58D40 /* Localizable.strings */,
-				14BB4EE4174BD6E600C75F78 /* PEPhotoCropEditor-Prefix.pch */,
-				14BB4ECD174BC59500C75F78 /* main.m */,
-				14BB4EC7174BC57700C75F78 /* Default.png */,
-				14BB4EC8174BC57700C75F78 /* Default@2x.png */,
-				14BB4EC6174BC57700C75F78 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		14BB4EAF174BC3DD00C75F78 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,19 +128,7 @@
 				14BB4EAF174BC3DD00C75F78 /* Resources */,
 			);
 			name = Lib;
-			sourceTree = "<group>";
-		};
-		14BB4EC5174BC52800C75F78 /* DemoApp */ = {
-			isa = PBXGroup;
-			children = (
-				14BB4EDA174BC5D300C75F78 /* AppDelegate.h */,
-				14BB4EDB174BC5D300C75F78 /* AppDelegate.m */,
-				14BB4EDC174BC5D300C75F78 /* ViewController.h */,
-				14BB4EDD174BC5D300C75F78 /* ViewController.m */,
-				14BB4EE8174BD70E00C75F78 /* MainStoryboard_iPad.storyboard */,
-				14BB4EEA174BD70E00C75F78 /* MainStoryboard_iPhone.storyboard */,
-			);
-			name = DemoApp;
+			path = PEPhotoCropEditor;
 			sourceTree = "<group>";
 		};
 		14BB4F06174BD79000C75F78 /* Sources */ = {
@@ -181,6 +146,27 @@
 				E576407417A7889200111967 /* UIImage+PECrop.m */,
 			);
 			name = Sources;
+			sourceTree = "<group>";
+		};
+		8B1C6D9D24414AD800CB3F0E /* DemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				8B1C6D9E24414AD800CB3F0E /* Localizable.strings */,
+				8B1C6DA124414AD800CB3F0E /* InfoPlist.strings */,
+				8B1C6DA324414AD800CB3F0E /* AppDelegate.h */,
+				8B1C6DA424414AD800CB3F0E /* Default@2x.png */,
+				8B1C6DA524414AD800CB3F0E /* PEPhotoCropEditor-Info.plist */,
+				8B1C6DA624414AD800CB3F0E /* ViewController.m */,
+				8B1C6DA724414AD800CB3F0E /* MainStoryboard_iPad.storyboard */,
+				8B1C6DA924414AD800CB3F0E /* MainStoryboard_iPhone.storyboard */,
+				8B1C6DAB24414AD800CB3F0E /* Default-568h@2x.png */,
+				8B1C6DAC24414AD800CB3F0E /* main.m */,
+				8B1C6DAD24414AD800CB3F0E /* AppDelegate.m */,
+				8B1C6DAE24414AD800CB3F0E /* PEPhotoCropEditor-Prefix.pch */,
+				8B1C6DAF24414AD800CB3F0E /* Default.png */,
+				8B1C6DB024414AD800CB3F0E /* ViewController.h */,
+			);
+			path = DemoApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,16 +196,17 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PE;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "kishikawa katsumi";
 			};
 			buildConfigurationList = 14BB4E81174BC39000C75F78 /* Build configuration list for PBXProject "PEPhotoCropEditor" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				ja,
+				Base,
 			);
 			mainGroup = 14BB4E7D174BC39000C75F78;
 			productRefGroup = 14BB4E87174BC39000C75F78 /* Products */;
@@ -236,14 +223,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BB4EC9174BC57700C75F78 /* Default-568h@2x.png in Resources */,
-				14BB4ECA174BC57700C75F78 /* Default.png in Resources */,
-				14BB4ECB174BC57700C75F78 /* Default@2x.png in Resources */,
-				14BB4EE7174BD70200C75F78 /* InfoPlist.strings in Resources */,
-				14BB4EEC174BD70E00C75F78 /* MainStoryboard_iPad.storyboard in Resources */,
-				14BB4EED174BD70E00C75F78 /* MainStoryboard_iPhone.storyboard in Resources */,
+				8B1C6DB624414AD800CB3F0E /* MainStoryboard_iPad.storyboard in Resources */,
+				8B1C6DBB24414AD800CB3F0E /* Default.png in Resources */,
+				8B1C6DB324414AD800CB3F0E /* Default@2x.png in Resources */,
 				14707AE7175B99D900A58D40 /* PEPhotoCropEditor.bundle in Resources */,
-				14707AEA175B9B6E00A58D40 /* Localizable.strings in Resources */,
+				8B1C6DB724414AD800CB3F0E /* MainStoryboard_iPhone.storyboard in Resources */,
+				8B1C6DB424414AD800CB3F0E /* PEPhotoCropEditor-Info.plist in Resources */,
+				8B1C6DB824414AD800CB3F0E /* Default-568h@2x.png in Resources */,
+				8B1C6DB224414AD800CB3F0E /* InfoPlist.strings in Resources */,
+				8B1C6DB124414AD800CB3F0E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BB4ECE174BC59500C75F78 /* main.m in Sources */,
-				14BB4EDE174BC5D300C75F78 /* AppDelegate.m in Sources */,
-				14BB4EDF174BC5D300C75F78 /* ViewController.m in Sources */,
+				8B1C6DB524414AD800CB3F0E /* ViewController.m in Sources */,
 				14BB4F09174BD79E00C75F78 /* PECropView.m in Sources */,
 				14BB4F0C174BD7B100C75F78 /* PECropViewController.m in Sources */,
 				14BB4F11174BD7CC00C75F78 /* PECropRectView.m in Sources */,
+				8B1C6DBA24414AD800CB3F0E /* AppDelegate.m in Sources */,
 				14BB4F12174BD7CC00C75F78 /* PEResizeControl.m in Sources */,
+				8B1C6DB924414AD800CB3F0E /* main.m in Sources */,
 				E576407617A7889200111967 /* UIImage+PECrop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,35 +256,35 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		14707AEC175B9B6E00A58D40 /* Localizable.strings */ = {
+		8B1C6D9E24414AD800CB3F0E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				14707AEB175B9B6E00A58D40 /* en */,
-				14707AED175B9B7000A58D40 /* ja */,
+				8B1C6D9F24414AD800CB3F0E /* ja */,
+				8B1C6DA024414AD800CB3F0E /* en */,
 			);
 			name = Localizable.strings;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		14BB4EE5174BD70200C75F78 /* InfoPlist.strings */ = {
+		8B1C6DA124414AD800CB3F0E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				14BB4EE6174BD70200C75F78 /* en */,
+				8B1C6DA224414AD800CB3F0E /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		14BB4EE8174BD70E00C75F78 /* MainStoryboard_iPad.storyboard */ = {
+		8B1C6DA724414AD800CB3F0E /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				14BB4EE9174BD70E00C75F78 /* en */,
+				8B1C6DA824414AD800CB3F0E /* Base */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		14BB4EEA174BD70E00C75F78 /* MainStoryboard_iPhone.storyboard */ = {
+		8B1C6DA924414AD800CB3F0E /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				14BB4EEB174BD70E00C75F78 /* en */,
+				8B1C6DAA24414AD800CB3F0E /* Base */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -308,28 +296,47 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -340,21 +347,39 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,7 +393,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/PEPhotoCropEditor-Prefix.pch";
 				INFOPLIST_FILE = "DemoApp/PEPhotoCropEditor-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kishikawakatsumi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -380,7 +406,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/PEPhotoCropEditor-Prefix.pch";
 				INFOPLIST_FILE = "DemoApp/PEPhotoCropEditor-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kishikawakatsumi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

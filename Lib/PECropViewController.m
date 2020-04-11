@@ -124,9 +124,8 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
     self.keepingCropAspectRatio = self.keepingCropAspectRatio;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
-    return YES;
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
 }
 
 #pragma mark -
