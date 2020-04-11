@@ -353,8 +353,15 @@ static const CGFloat MarginLeft = 20.0f;
     CGSize size = self.image.size;
     
     CGFloat ratio = 1.0f;
-    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad || UIInterfaceOrientationIsPortrait(orientation)) {
+    
+    BOOL isPortrait = NO;
+    if (@available(iOS 13.0, *)) {
+        isPortrait = UIInterfaceOrientationIsPortrait(self.window.windowScene.interfaceOrientation);
+    } else {
+        isPortrait = UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation]);
+    }
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad || isPortrait) {
         ratio = CGRectGetWidth(AVMakeRectWithAspectRatioInsideRect(self.image.size, self.insetRect)) / size.width;
     } else {
         ratio = CGRectGetHeight(AVMakeRectWithAspectRatioInsideRect(self.image.size, self.insetRect)) / size.height;
