@@ -9,10 +9,9 @@
 #import "PECropViewController.h"
 #import "PECropView.h"
 
-@interface PECropViewController () <UIActionSheetDelegate>
+@interface PECropViewController ()
 
 @property (nonatomic) PECropView *cropView;
-@property (nonatomic) UIActionSheet *actionSheet;
 
 - (void)commonInit;
 
@@ -95,7 +94,7 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
                                                                                        target:nil
                                                                                        action:nil];
         UIBarButtonItem *constrainButton = [[UIBarButtonItem alloc] initWithTitle:PELocalizedString(@"Constrain", nil)
-                                                                            style:UIBarButtonItemStyleBordered
+                                                                            style:UIBarButtonItemStylePlain
                                                                            target:self
                                                                            action:@selector(constrain:)];
         self.toolbarItems = @[flexibleSpace, constrainButton, flexibleSpace];
@@ -222,28 +221,39 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
 
 - (void)constrain:(id)sender
 {
-    self.actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-                                                   delegate:self
-                                          cancelButtonTitle:PELocalizedString(@"Cancel", nil)
-                                     destructiveButtonTitle:nil
-                                          otherButtonTitles:
-                        PELocalizedString(@"Original", nil),
-                        PELocalizedString(@"Square", nil),
-                        PELocalizedString(@"3 x 2", nil),
-                        PELocalizedString(@"3 x 5", nil),
-                        PELocalizedString(@"4 x 3", nil),
-                        PELocalizedString(@"4 x 6", nil),
-                        PELocalizedString(@"5 x 7", nil),
-                        PELocalizedString(@"8 x 10", nil),
-                        PELocalizedString(@"16 x 9", nil), nil];
-    [self.actionSheet showFromToolbar:self.navigationController.toolbar];
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:PELocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
+    [actionSheet addAction:cancelAction];
+    
+    NSDictionary *constraints = @{
+        PELocalizedString(@"Original", nil): @(0),
+        PELocalizedString(@"Square", nil): @(1),
+        PELocalizedString(@"3 x 2", nil): @(2.0f/3.0f),
+        PELocalizedString(@"3 x 5", nil): @(3.0f/5.0f),
+        PELocalizedString(@"4 x 3", nil): @(4.0f/3.0f),
+        PELocalizedString(@"4 x 6", nil): @(4.0f/6.0f),
+        PELocalizedString(@"5 x 7", nil): @(5.0f/7.0f),
+        PELocalizedString(@"8 x 10", nil): @(8.0f/10.0f),
+        PELocalizedString(@"16 x 9", nil): @(16.0f/9.0f)
+    };
+    
+    for (NSString *constraintKey in constraints) {
+        NSNumber *constraintRatio = constraints[constraintKey];
+        CGFloat ratio = [constraintRatio doubleValue];
+        UIAlertAction *ratioAction = [UIAlertAction actionWithTitle:constraintKey style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self constrainWithRatio:ratio];
+        }];
+        [actionSheet addAction:ratioAction];
+    }
+
+    [self presentViewController:actionSheet animated:YES completion:^{}];
 }
 
 #pragma mark -
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 0) {
+-(void)constrainWithRatio:(CGFloat)ratio {
+    if (ratio == 0.0f) {
         CGRect cropRect = self.cropView.cropRect;
         CGSize size = self.cropView.image.size;
         CGFloat width = size.width;
@@ -257,30 +267,20 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
             cropRect.size = CGSizeMake(CGRectGetWidth(cropRect), CGRectGetWidth(cropRect) * ratio);
         }
         self.cropView.cropRect = cropRect;
-    } else if (buttonIndex == 1) {
-        self.cropView.cropAspectRatio = 1.0f;
-    } else if (buttonIndex == 2) {
-        self.cropView.cropAspectRatio = 2.0f / 3.0f;
-    } else if (buttonIndex == 3) {
-        self.cropView.cropAspectRatio = 3.0f / 5.0f;
-    } else if (buttonIndex == 4) {
+    } else if (ratio == (3.0f/4.0f)) {
         CGFloat ratio = 3.0f / 4.0f;
         CGRect cropRect = self.cropView.cropRect;
         CGFloat width = CGRectGetWidth(cropRect);
         cropRect.size = CGSizeMake(width, width * ratio);
         self.cropView.cropRect = cropRect;
-    } else if (buttonIndex == 5) {
-        self.cropView.cropAspectRatio = 4.0f / 6.0f;
-    } else if (buttonIndex == 6) {
-        self.cropView.cropAspectRatio = 5.0f / 7.0f;
-    } else if (buttonIndex == 7) {
-        self.cropView.cropAspectRatio = 8.0f / 10.0f;
-    } else if (buttonIndex == 8) {
+    } else if (ratio == (9.0f/16.0f)) {
         CGFloat ratio = 9.0f / 16.0f;
         CGRect cropRect = self.cropView.cropRect;
         CGFloat width = CGRectGetWidth(cropRect);
         cropRect.size = CGSizeMake(width, width * ratio);
         self.cropView.cropRect = cropRect;
+    } else {
+        self.cropView.cropAspectRatio = ratio;
     }
 }
 

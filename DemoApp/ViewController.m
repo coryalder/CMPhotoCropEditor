@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "PECropViewController.h"
 
-@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, PECropViewControllerDelegate>
+@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, PECropViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *editButton;
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
@@ -85,23 +85,29 @@
 
 - (IBAction)cameraButtonAction:(id)sender
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-                                                             delegate:self
-                                                    cancelButtonTitle:nil
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:NSLocalizedString(@"Photo Album", nil), nil];
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        [actionSheet addButtonWithTitle:NSLocalizedString(@"Camera", nil)];
+        UIAlertAction *cameraAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Camera", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            // camera action
+            [self showCamera];
+        }];
+        
+        [actionSheet addAction:cameraAction];
     }
     
-    [actionSheet addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
-    actionSheet.cancelButtonIndex = actionSheet.numberOfButtons - 1;
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        [actionSheet showFromBarButtonItem:self.cameraButton animated:YES];
-    } else {
-        [actionSheet showFromToolbar:self.navigationController.toolbar];
-    }
+    [actionSheet addAction:cancelAction];
+    
+    UIAlertAction *albumAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Photo Album", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // album action
+        [self openPhotoAlbum];
+    }];
+    
+    [actionSheet addAction:albumAction];
+    
+    [self presentViewController:actionSheet animated:YES completion:^{}];
 }
 
 #pragma mark - Private methods
@@ -149,21 +155,6 @@
 - (void)updateEditButtonEnabled
 {
     self.editButton.enabled = !!self.imageView.image;
-}
-
-#pragma mark - UIActionSheetDelegate methods
-
-/*
- Open camera or photo album.
- */
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
-    if ([buttonTitle isEqualToString:NSLocalizedString(@"Photo Album", nil)]) {
-        [self openPhotoAlbum];
-    } else if ([buttonTitle isEqualToString:NSLocalizedString(@"Camera", nil)]) {
-        [self showCamera];
-    }
 }
 
 #pragma mark - UIImagePickerControllerDelegate methods

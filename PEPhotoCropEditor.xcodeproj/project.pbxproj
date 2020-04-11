@@ -20,7 +20,6 @@
 		8B1C6DB124414AD800CB3F0E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6D9E24414AD800CB3F0E /* Localizable.strings */; };
 		8B1C6DB224414AD800CB3F0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA124414AD800CB3F0E /* InfoPlist.strings */; };
 		8B1C6DB324414AD800CB3F0E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA424414AD800CB3F0E /* Default@2x.png */; };
-		8B1C6DB424414AD800CB3F0E /* PEPhotoCropEditor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA524414AD800CB3F0E /* PEPhotoCropEditor-Info.plist */; };
 		8B1C6DB524414AD800CB3F0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA624414AD800CB3F0E /* ViewController.m */; };
 		8B1C6DB624414AD800CB3F0E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA724414AD800CB3F0E /* MainStoryboard_iPad.storyboard */; };
 		8B1C6DB724414AD800CB3F0E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C6DA924414AD800CB3F0E /* MainStoryboard_iPhone.storyboard */; };
@@ -228,7 +227,6 @@
 				8B1C6DB324414AD800CB3F0E /* Default@2x.png in Resources */,
 				14707AE7175B99D900A58D40 /* PEPhotoCropEditor.bundle in Resources */,
 				8B1C6DB724414AD800CB3F0E /* MainStoryboard_iPhone.storyboard in Resources */,
-				8B1C6DB424414AD800CB3F0E /* PEPhotoCropEditor-Info.plist in Resources */,
 				8B1C6DB824414AD800CB3F0E /* Default-568h@2x.png in Resources */,
 				8B1C6DB224414AD800CB3F0E /* InfoPlist.strings in Resources */,
 				8B1C6DB124414AD800CB3F0E /* Localizable.strings in Resources */,
