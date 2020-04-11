@@ -219,30 +219,30 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
     }
 }
 
-- (void)constrain:(id)sender
-{
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+- (void)constrain:(id)sender {
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
 
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:PELocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
     [actionSheet addAction:cancelAction];
     
-    NSDictionary *constraints = @{
-        PELocalizedString(@"Original", nil): @(0),
-        PELocalizedString(@"Square", nil): @(1),
-        PELocalizedString(@"3 x 2", nil): @(2.0f/3.0f),
-        PELocalizedString(@"3 x 5", nil): @(3.0f/5.0f),
-        PELocalizedString(@"4 x 3", nil): @(4.0f/3.0f),
-        PELocalizedString(@"4 x 6", nil): @(4.0f/6.0f),
-        PELocalizedString(@"5 x 7", nil): @(5.0f/7.0f),
-        PELocalizedString(@"8 x 10", nil): @(8.0f/10.0f),
-        PELocalizedString(@"16 x 9", nil): @(16.0f/9.0f)
-    };
+    NSArray *constraints = @[
+        @[PELocalizedString(@"Original", nil), @(0)],
+        @[PELocalizedString(@"Square", nil), @(1)],
+        @[PELocalizedString(@"3 x 2", nil), @(3.0f/2.0f)],
+        @[PELocalizedString(@"3 x 5", nil), @(3.0f/5.0f)],
+        @[PELocalizedString(@"4 x 3", nil), @(4.0f/3.0f)],
+        @[PELocalizedString(@"4 x 6", nil), @(4.0f/6.0f)],
+        @[PELocalizedString(@"5 x 7", nil), @(5.0f/7.0f)],
+        @[PELocalizedString(@"8 x 10", nil), @(8.0f/10.0f)],
+        @[PELocalizedString(@"16 x 9", nil), @(16.0f/9.0f)]
+    ];
     
-    for (NSString *constraintKey in constraints) {
-        NSNumber *constraintRatio = constraints[constraintKey];
-        CGFloat ratio = [constraintRatio doubleValue];
-        UIAlertAction *ratioAction = [UIAlertAction actionWithTitle:constraintKey style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [self constrainWithRatio:ratio];
+    for (NSArray *constraintTuple in constraints) {
+        NSString *constraintTitle = constraintTuple[0];
+        NSNumber *constraintRatio = constraintTuple[1];
+        CGFloat floatRatio = [constraintRatio doubleValue];
+        UIAlertAction *ratioAction = [UIAlertAction actionWithTitle:constraintTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self constrainWithRatio:floatRatio];
         }];
         [actionSheet addAction:ratioAction];
     }
