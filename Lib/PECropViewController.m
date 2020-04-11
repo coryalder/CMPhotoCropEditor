@@ -258,26 +258,25 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
         CGSize size = self.cropView.image.size;
         CGFloat width = size.width;
         CGFloat height = size.height;
-        CGFloat ratio;
+        
         if (width < height) {
-            ratio = width / height;
+            CGFloat ratio = width / height;
             cropRect.size = CGSizeMake(CGRectGetHeight(cropRect) * ratio, CGRectGetHeight(cropRect));
         } else {
-            ratio = height / width;
+            CGFloat ratio = height / width;
             cropRect.size = CGSizeMake(CGRectGetWidth(cropRect), CGRectGetWidth(cropRect) * ratio);
         }
+        
         self.cropView.cropRect = cropRect;
-    } else if (ratio == (3.0f/4.0f)) {
-        CGFloat ratio = 3.0f / 4.0f;
+    } else if (ratio == (4.0f/3.0f)) {
         CGRect cropRect = self.cropView.cropRect;
         CGFloat width = CGRectGetWidth(cropRect);
         cropRect.size = CGSizeMake(width, width * ratio);
         self.cropView.cropRect = cropRect;
-    } else if (ratio == (9.0f/16.0f)) {
-        CGFloat ratio = 9.0f / 16.0f;
+    } else if (ratio == (16.0f/9.0f)) {
         CGRect cropRect = self.cropView.cropRect;
         CGFloat width = CGRectGetWidth(cropRect);
-        cropRect.size = CGSizeMake(width, width * ratio);
+        cropRect.size = CGSizeMake(width, width / ratio);
         self.cropView.cropRect = cropRect;
     } else {
         self.cropView.cropAspectRatio = ratio;
